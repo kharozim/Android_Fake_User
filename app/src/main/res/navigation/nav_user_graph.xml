@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_user_graph"
+    app:startDestination="@id/usersList">
+
+    <fragment
+        android:id="@+id/userList"
+        android:name="com.kharozim.androidfakeuser.ui.fragments.UserList"
+        android:label="fragment_user_list"
+        tools:layout="@layout/fragment_user_list" />
+    <fragment
+        android:id="@+id/usersList"
+        android:name="com.kharozim.androidfakeuser.ui.fragments.UsersList"
+        android:label="fragment_users_list"
+        tools:layout="@layout/fragment_users_list" >
+        <action
+            android:id="@+id/action_usersList_to_userList"
+            app:destination="@id/userList" />
+    </fragment>
+</navigation>
